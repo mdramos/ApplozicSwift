@@ -102,6 +102,8 @@ extension ALMessage: ALKChatViewModelProtocol {
             return message
         case .cardTemplate:
             return message
+        case .document:
+            return "Document"
         }
     }
 
@@ -295,7 +297,7 @@ extension ALMessage {
         } else if fileMeta.contentType.hasPrefix("video") {
             return .video
         } else {
-            return nil
+            return .document
         }
     }
 

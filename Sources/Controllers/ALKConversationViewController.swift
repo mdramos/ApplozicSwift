@@ -576,6 +576,9 @@ open class ALKConversationViewController: ALKBaseViewController, Localizable {
         tableView.register(ALKFriendMessageButtonCell.self)
         tableView.register(ALKMyListTemplateCell.self)
         tableView.register(ALKFriendListTemplateCell.self)
+        tableView.register(ALKMyDocumentCell.self)
+        tableView.register(ALKFriendDocumentCell.self)
+        tableView.register(ALKMyDocumentCell.self)
     }
 
 

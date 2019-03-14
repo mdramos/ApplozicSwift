@@ -307,6 +307,12 @@ open class ALKConversationViewModel: NSObject, Localizable {
             } else {
                 return ALKFriendListTemplateCell.rowHeight(viewModel: messageModel, maxWidth: UIScreen.main.bounds.width)
             }
+        case .document:
+            if messageModel.isMyMessage {
+                return ALKMyDocumentCell.rowHeight(viewModel: messageModel, width: maxWidth)
+            } else {
+                return ALKFriendDocumentCell.rowHeight(viewModel: messageModel, width: maxWidth)
+            }
         }
     }
 
